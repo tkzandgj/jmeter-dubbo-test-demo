@@ -36,12 +36,14 @@ public class DemoServiceTest extends AbstractJavaSamplerClient {
      */
     public SampleResult runTest(JavaSamplerContext javaSamplerContext) {
         SampleResult result = new SampleResult();
+        result.sampleStart();
         try {
             long start = System.currentTimeMillis();
             this.demoService.demo();
             result.setSuccessful(true);
             long end = System.currentTimeMillis();
             result.setResponseData((end - start)+"", null);
+
         } finally {
             result.sampleEnd();
         }
