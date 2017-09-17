@@ -8,7 +8,8 @@ import jemter.dubbo.test.service.DemoService;
 public class DemoServiceImpl implements DemoService {
 
     public void demo() {
-        System.err.println("test demo now.");
+        //System.err.println("test demo now.");
+        System.out.println("==============test dubbo interface=============");
     }
 
 }
